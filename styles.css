@@ -40,16 +40,11 @@ body {
   outline: none;
   border-radius: 10px;
 }
-label,
-#title {
+label {
   cursor: pointer;
   text-transform: uppercase;
   color: var(--color);
   mix-blend-mode: difference;
-}
-
-#title {
-  cursor: unset;
 }
 
 #colorPicker {
@@ -91,7 +86,8 @@ label,
   -webkit-backdrop-filter: blur(4px);
 }
 
-p {
+p,
+#title {
   transition: all 0.5s linear;
   color: white;
   mix-blend-mode: difference;
