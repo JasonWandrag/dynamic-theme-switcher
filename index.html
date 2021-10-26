@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Glassmorphism & Neumorphism Themes</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container neumorphic">
+      <div class="card" data-tilt>
+        <label for="colorPicker">
+          <p>Change my color</p>
+        </label>
+        <input
+          class="btn"
+          id="colorPicker"
+          type="color"
+          name="favcolor"
+          value="#355070"
+          onchange="changeColor()"
+        />
+        <button class="btn" onclick="changeTheme()">Change My Theme</button>
+      </div>
+    </div>
+    <script src="./scripts.js"></script>
+  </body>
+</html>

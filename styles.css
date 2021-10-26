@@ -1,0 +1,94 @@
+:root {
+  --color: #355070;
+  --shadowOne: #2d445f;
+  --shadowTwo: #3d5c81;
+  --glassColor: rgba(255, 255, 255, 0.25);
+  --glassBackground: url(https://picsum.photos/1920?random=1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+}
+.container {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+  transition: all 1s ease;
+  color: #222;
+}
+.card {
+  transition: all 0.5s ease;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  transition: all 0.5s ease;
+  cursor: pointer;
+  margin-top: 20px;
+  color: #222;
+  padding: 10%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+label {
+  cursor: pointer;
+  text-transform: uppercase;
+  color: var(--color);
+  mix-blend-mode: difference;
+}
+#colorPicker {
+  display: none;
+}
+
+/* NEUMORPHIC STYLES */
+.neumorphic {
+  background: var(--color);
+}
+
+.neumorphic .card {
+  border-radius: 50px;
+  background: var(--color);
+}
+.neumorphic .card:hover,
+.neumorphic .btn:hover {
+  box-shadow: 20px 20px 60px var(--shadowOne), -20px -20px 60px var(--shadowTwo);
+}
+
+.neumorphic .btn {
+  border-radius: 10px;
+  background: var(--color);
+}
+/* GLASSMORPHIC STYLES */
+
+.glassmorphic {
+  background: var(--glassBackground);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.glassmorphic .card,
+.glassmorphic .btn {
+  background: var(--glassColor);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+p {
+  transition: all 0.5s linear;
+  color: white;
+  mix-blend-mode: difference;
+  font: 900 1.2rem sans-serif;
+  text-align: center;
+}
