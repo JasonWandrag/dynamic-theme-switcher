@@ -12,6 +12,10 @@ function changeColor() {
 }
 
 function changeTheme() {
+  let title = document.querySelector("#title");
+  const newTitle =
+    title.innerHTML == "Neumorphism" ? "Glassmorphism" : "Neumorphism";
+  title.innerHTML = newTitle;
   randomNum++;
   let el = document.getElementsByClassName("container")[0];
   if (el.classList.contains("neumorphic")) {

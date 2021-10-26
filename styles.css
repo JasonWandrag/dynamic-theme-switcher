@@ -40,12 +40,18 @@ body {
   outline: none;
   border-radius: 10px;
 }
-label {
+label,
+#title {
   cursor: pointer;
   text-transform: uppercase;
   color: var(--color);
   mix-blend-mode: difference;
 }
+
+#title {
+  cursor: unset;
+}
+
 #colorPicker {
   display: none;
 }
